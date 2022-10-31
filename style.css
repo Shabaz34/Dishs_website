@@ -1,0 +1,230 @@
+body {
+  background: #d53369; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #cbad6d,
+    #d53369
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #cbad6d,
+    #d53369
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+* {
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+}
+.img-fluid {
+  aspect-ratio: 14/9;
+}
+.indreg,
+.indregIn {
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  max-width: 160px;
+  border-radius: 20%;
+}
+
+P {
+  margin-bottom: 0rem;
+}
+
+.HeaderP {
+  font-size: 40px;
+}
+
+.Dishs,
+.DishsIn {
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8);
+  max-height: 100%;
+  max-width: 200px;
+}
+.DishsIn {
+  max-width: 200px;
+}
+
+.dishRow {
+  padding-bottom: 40px;
+  max-height: 400px;
+}
+
+button {
+  margin: 3%;
+  cursor: pointer;
+}
+header > div > button:hover {
+  transform: rotate(360deg);
+  transition-duration: 2s;
+}
+.indreg {
+  position: relative;
+  padding-bottom: 40px;
+  max-height: 310px;
+}
+img {
+  width: 100px;
+  max-height: 100px;
+}
+
+.cal {
+  position: absolute;
+  bottom: 10px;
+}
+
+.calIn {
+  position: relative;
+  bottom: 5px;
+}
+@media only screen and (max-width: 769px) {
+  .calIn {
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 366px) {
+  .calIn {
+    position: relative;
+  }
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  color: #dca959;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid rgb(190, 213, 97);
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(172, 219, 83, 0.4);
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(92, 106, 52, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+.btnDiv {
+  padding-top: 10px;
+}
+
+.btnAd {
+  border-radius: 40%;
+  background-color: #c3407b;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  position: relative;
+
+  border: none;
+  transition: all 0.3s ease 0s;
+}
+.btnAd:hover,
+.btnAd.active:hover {
+  color: #ffffff;
+}
+.btnAd:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  background-color: #2e0014;
+  width: 30%;
+  height: 4px;
+  transition: all 0.3s ease 0s;
+}
+.btnAd:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  right: 0;
+  background-color: #2e0014;
+  width: 30%;
+  height: 4px;
+  transition: all 0.3s ease 0s;
+}
+.btnAd:hover:before,
+.btnAd:hover:after,
+.btnAd.active:before,
+.btnAd.active:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+  .btnAd {
+    margin-bottom: 50px !important;
+  }
+}
