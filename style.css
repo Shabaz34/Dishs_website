@@ -1,15 +1,5 @@
 body {
-  background: #d53369; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #cbad6d,
-    #d53369
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #cbad6d,
-    #d53369
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
 }
 
 * {
@@ -19,6 +9,10 @@ body {
 }
 .img-fluid {
   aspect-ratio: 14/9;
+}
+
+a {
+  color: #2e0014;
 }
 .indreg,
 .indregIn {
@@ -127,7 +121,7 @@ img {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: rgb(148, 71, 140);
   text-decoration: none;
   cursor: pointer;
 }
@@ -141,20 +135,20 @@ img {
 a {
   font-size: 1.5rem;
   padding: 1rem 3rem;
-  color: #dca959;
+  color: #0b0906;
   text-transform: uppercase;
 }
 
 .btn {
   text-decoration: none;
-  border: 1px solid rgb(190, 213, 97);
+  border: 2px solid rgb(15, 16, 10);
   position: relative;
   overflow: hidden;
   border-radius: 50%;
 }
 
 .btn:hover {
-  box-shadow: 1px 1px 25px 10px rgba(172, 219, 83, 0.4);
+  box-shadow: 1px 1px 25px 10px rgba(219, 83, 158, 0.4);
 }
 
 .btn:before {
@@ -167,7 +161,7 @@ a {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(92, 106, 52, 0.4),
+    rgba(88, 78, 198, 0.4),
     transparent
   );
   transition: all 650ms;
@@ -227,4 +221,8 @@ a {
   .btnAd {
     margin-bottom: 50px !important;
   }
+}
+
+.soundDiv {
+  display: none;
 }

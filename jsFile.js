@@ -1,3 +1,5 @@
+inFirst = 0;
+
 function AddIngre(IngrediantName, IngrediantImage, IngrediantCalories) {
   if (IngrediantName == "") {
     alert("Insert ingrediant name");
@@ -109,6 +111,8 @@ function RendDishOp() {
 }
 
 function AddDish(DishName, DishTime, DishCookingMethod, DishImage) {
+  document.getElementById("soundIn").play();
+
   if (DishName == "") {
     alert("Insert dish name");
     document.getElementById("DishName").value = "";
@@ -149,7 +153,7 @@ function ReRendDish() {
     str += `<p >Cock method: ${dishArray[val].cookingMethod}</p>`;
     str += `<p>Time cock: ${dishArray[val].time}</p>`;
     str += `<p>Total Calories: ${dishArray[val].totalCalories()}</p>`;
-    str += `<button id="myBtn${num}" onClick="modalOpen(${val})"> Show ingredients </button>
+    str += `<button id="myBtn${num}" onClick="OpenModal(${val})"> Show ingredients </button>
     <div id="myModal${num}" class="modal">
           <div class="modal-content">
         <span class="close">&times;</span>
@@ -161,6 +165,15 @@ function ReRendDish() {
     num++;
   }
   str += `</div>`;
+  str += `    <div class="soundDiv">
+<audio id="soundIn" controls>
+  <source
+    src="WhatsApp Ptt 2022-11-02 at 19.06.53.ogg"
+    type="audio/mpeg"
+  />
+</audio>
+</div>`;
+
   document.getElementById("DishesRend").innerHTML = str;
 }
 
@@ -245,6 +258,14 @@ class DishRecipe {
     }
     return totCal;
   }
+
+  getIngredients() {
+    let strIng = "";
+    for (let i = 0; i < this.ingredients.length; i++) {
+      strIng += `<br> ${this.ingredients[i].name}`;
+    }
+    return strIng;
+  }
 }
 
 ingArray = [p1, p2, p5];
@@ -268,7 +289,7 @@ d2 = new DishRecipe(
 
 dishArray = [d1, d2];
 
-function modalOpen(modIng) {
+function OpenModal(modIng) {
   var modal = document.getElementById(`myModal${modIng}`);
 
   // Get the button that opens the modal
