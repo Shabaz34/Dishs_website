@@ -142,7 +142,8 @@ function AddDish(DishName, DishTime, DishCookingMethod, DishImage) {
 }
 
 function ReRendDish() {
-  str = `<div class="row dishRow">`;
+  str = `<H2><u>Recepis</u></H2><br>
+  <div class="row dishRow">`;
   num = 0;
 
   for (val in dishArray) {
@@ -291,17 +292,15 @@ dishArray = [d1, d2];
 
 function OpenModal(modIng) {
   var modal = document.getElementById(`myModal${modIng}`);
-
   // Get the button that opens the modal
+  modal.style.display = "block";
+
   var btn = document.getElementById(`myBtn${modIng}`);
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[modIng];
 
   // When the user clicks on the button, open the modal
-  btn.onclick = function () {
-    modal.style.display = "block";
-  };
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
